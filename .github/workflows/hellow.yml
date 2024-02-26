@@ -3,7 +3,7 @@ name: hello-world
 jobs:
   builds:
     runs-on: windows-latest
-  steps:
+    steps:
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
     - name: Export Solution
