@@ -1,24 +1,18 @@
-name: hello-world1
+name: hello-world
 'on': push
 jobs:
   builds:
     runs-on: windows-latest
     steps:
+    - name: Install Power Platform Tools
+      uses: microsoft/powerplatform-actions/actions-install@v1
     - name: Export Solution
-      uses: microsoft/powerplatform-actions/export-solution@v0
+      uses: microsoft/powerplatform-actions/export-solution@v1
       with:
         environment-url: 'https://org847ad10d.api.crm.dynamics.com/api/data/v9.2'
-        user-name: 'bk@65bwhm.onmicrosoft.com'
-        password-secret: ${{ secrets.MYREPO }}
+        user-name: bk@65bwhm.onmicrosoft.com
+        password-secret: '${{ secrets.MYREPO }}'
         solution-name: POC Solution
-        solution-output-file: 'POCSolution.zip'
-        working-directory: 'out'
-
-    - name: Unpack Solution
-      uses: microsoft/powerplatform-actions/unpack-solution@v0
-      with:
-        solution-file: 'out/POCSolution.zip'
-        solution-folder: 'out/solutions/solution one'
-        solution-type: 'Unmanaged'
-        overwrite-files: true
+        solution-output-file: POCSolution.zip
+        working-directory: out
    
