@@ -9,7 +9,7 @@ jobs:
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
-        environment-url: 'https://org847ad10d.api.crm.dynamics.com/api/data/v9.2'
+        environment-url: 'https://org847ad10d.api.crm.dynamics.com'
         user-name: bk@65bwhm.onmicrosoft.com
         password-secret: '${{ secrets.MYREPO }}'
         solution-name: POC Solution
