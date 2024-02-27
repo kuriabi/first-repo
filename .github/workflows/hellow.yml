@@ -2,7 +2,7 @@ name: hello-world
 'on': push
 jobs:
   builds:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
@@ -10,9 +10,9 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
         environment-url: 'https://org847ad10d.api.crm.dynamics.com'
-        user-name: bk@65bwhm.onmicrosoft.com
+        user-name: 'bk@65bwhm.onmicrosoft.com'
         password-secret: '${{ secrets.MYREPO }}'
-        solution-name: POC Solution
+        solution-name: POCSolution
         solution-output-file: POCSolution.zip
         working-directory: out
    
