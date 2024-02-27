@@ -2,7 +2,7 @@ name: hello-world
 'on': push
 jobs:
   builds:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
